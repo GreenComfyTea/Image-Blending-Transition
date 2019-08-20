@@ -1,0 +1,85 @@
+﻿<Window x:Class="ImageBlendingTransition.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ImageBlendingTransition"
+        mc:Ignorable="d"
+        Title="Image Blending Transition"
+		Width="1280" Height="720"
+		Background="DarkGray"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+            <RowDefinition />
+            <RowDefinition Height="10" />
+            <RowDefinition />
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="10" />
+        </Grid.ColumnDefinitions>
+
+        <Frame Grid.Row="1" Grid.Column="1" Background="LightGray" />
+        <Frame Grid.Row="1" Grid.Column="3" Background="LightGray" />
+        <Frame Grid.Row="3" Grid.Column="1" Background="LightGray" />
+        <Frame Grid.Row="3" Grid.Column="3" Background="LightGray" />
+
+        <Image x:Name="sourceImage1" Grid.Row="1" Grid.Column="1" />
+        <Image x:Name="sourceImage2" Grid.Row="1" Grid.Column="3" />
+        <Image x:Name="resultImage" Grid.Row="3" Grid.Column="1" />
+
+        <Grid Grid.Row="3" Grid.Column="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="10" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="10" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="10" />
+            </Grid.ColumnDefinitions>
+
+            <Image Source="images/yorha_1280p.png" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="11" />
+
+            <Button x:Name="loadSourceImage1_Button" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Content="Load First Image" Click="LoadFirstSourceImage" />
+            <Button x:Name="loadSourceImage2_Button" Grid.Row="2" Grid.Column="5" Grid.ColumnSpan="3" Content="Load Second Image" Click="LoadSecondSourceImage" IsEnabled="False" />
+            <Button x:Name="saveResultImage_Button" Grid.Row="2" Grid.Column="9" Grid.ColumnSpan="3" Content="Save Result Image" Click="SaveResultImage" IsEnabled="False" />
+
+            <ComboBox x:Name="blendingMode_ComboBox" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" ItemsSource="{Binding Source={local:EnumBindingSource {x:Type local:BlendingModes}}}" SelectedIndex="0" VerticalContentAlignment="Center" IsEnabled="False" SelectionChanged="BlendingModeChanged" />
+            <ComboBox x:Name="transitionMode_ComboBox" Grid.Row="4" Grid.Column="5" Grid.ColumnSpan="3" ItemsSource="{Binding Source={local:EnumBindingSource {x:Type local:TransitionModes}}}" SelectedIndex="0" VerticalContentAlignment="Center" IsEnabled="False" />
+            <Button x:Name="Perform_Button" Grid.Row="4" Grid.Column="9" Grid.ColumnSpan="3" Content="Perform" Click="Perform" IsEnabled="False" />
+
+            <TextBlock Grid.Row="6" Grid.Column="1" Text="Opacity:" />
+            <Slider x:Name="opacity_Slider" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="8" VerticalAlignment="Center" Value="0.5" Minimum="0" Maximum="1" ValueChanged="OpacityChanged" />
+            <TextBox x:Name="opacity_TextBox" Grid.Row="6" Grid.Column="11" Text="0.500"  Focusable="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+
+            <ProgressBar x:Name="progressBar" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="11" Height="20" Maximum="1" Minimum="0" />
+        </Grid>
+    </Grid>
+</Window>
