@@ -2,6 +2,11 @@
 
 <img src="https://i.imgur.com/CZ9vTjW.png" />
 
+# Prerequisites
+- .Net Framework 4.7.2
+- Extended.Wpf.Toolkit 3.5.0 (included)
+- WriteableBitmapEx 1.6.2 (included)
+
 # Features
 - Loading image from file (tested formats are PNG (with and without alpha channel), JPG, JPEG, BMP).
 - Saving image to file.
