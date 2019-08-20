@@ -1,4 +1,4 @@
-<h1>Image Processing</h1>
+<h1>Image Blending Transition</h1>
 
 <img src="https://i.imgur.com/CZ9vTjW.png" />
 
