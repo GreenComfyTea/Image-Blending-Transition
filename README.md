@@ -21,10 +21,10 @@
   - Difference.
 - Transition modes:
   - No Transition;
-  - Wipe(Left to Right);
-  - Wipe(Right to Left);
-  - Wipe(Top to Bottom);
-  - Wipe(Bottom to Top);
+  - Wipe (Left to Right);
+  - Wipe (Right to Left);
+  - Wipe (Top to Bottom);
+  - Wipe (Bottom to Top);
   - Split (Horizontal);
   - Split (Vertical);
   - Fade;
