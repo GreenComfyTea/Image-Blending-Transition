@@ -102,7 +102,7 @@
 
 <p align="center">
 	<a>
-		<img align="center" src="[https://i.imgur.com/sbRFma3.png](https://github.com/GreenComfyTea/Image-Blending-Transition/assets/30152047/9e1ee496-19a8-4276-81d0-76d4c5d752fc)" />
+		<img align="center" src="https://github.com/GreenComfyTea/Image-Blending-Transition/assets/30152047/9e1ee496-19a8-4276-81d0-76d4c5d752fc" />
 	</a>
 </p>
 
