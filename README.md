@@ -105,6 +105,12 @@
 	</a>
 </p>
 
+<p align="center">
+	<a>
+		<img align="center" src="https://github.com/GreenComfyTea/Image-Blending-Transition/assets/30152047/62eb9571-a6d3-4e1a-8271-13a6ecfff5d6" />
+	</a>
+</p>
+
 # Prerequisites
 - .Net Framework 4.7.2
 - Extended.Wpf.Toolkit 3.5.0 (included)
